@@ -39,23 +39,17 @@ function addExcitement (theWordArray, symbol, times) {
         // Print buildMeUp to the console
         // console.log(buildMeUp += ' ' + theWordArray[i])
         
-        if ((i+1) % 3 === 0 ){
-            console.log(buildMeUp += " " +theWordArray[i] + symbol)
-        // } else {
-        //     // buildMeUp += " " +theWordArray[i]
-        // } 
-                
+        if((i+1) % 3 === 0 ){
+            buildMeUp += `${theWordArray[i]}${symbol.repeat(times)} `    
+        } else {
+            buildMeUp += `${theWordArray[i]} `
         }
-         if ((i+1)%3===0){
-            for (let j=0; j<times; j++){
-            buildMeUp+=symbol 
-            }
-        }
+         
     
-        
-        console.log(buildMeUp += ' ' + theWordArray[i])
+        //console.log(theWordArray[i])
+        console.log(buildMeUp)
     }
 
-
+}
 // Invoke the function and pass in the array
-addExcitement(sentence, "!")
+addExcitement(sentence, "!", 4)
